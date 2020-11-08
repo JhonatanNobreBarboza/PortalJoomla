@@ -13,3 +13,4 @@
 2020-11-07T05:15:39+00:00	INFO ::1	joomlafailure	Nome de usuário e senha incorretos ou você ainda não possui uma conta.
 2020-11-07T05:16:57+00:00	INFO ::1	joomlafailure	Nome de usuário e senha incorretos ou você ainda não possui uma conta.
 2020-11-07T05:18:39+00:00	INFO ::1	joomlafailure	Não é permitido senha vazia
+2020-11-08T00:01:47+00:00	INFO ::1	joomlafailure	Não é permitido senha vazia
