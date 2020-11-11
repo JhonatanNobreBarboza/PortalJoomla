@@ -1,16 +1,30 @@
 'use strict'
 
-const Post = use('App/Models/Post')
+const Posts = use('App/Models/Proj_Post')
 
 class PostController {
-    async post({ request }) {
+    async index({ request, response, view }) {
+        const postagens = await Posts.all();
+        return postagens;
+    }
+    async store({ request, response, view }) {
+        const data = request.only(["titulo", "subtitulo", "conteudo"]);
+        const postagens = await Posts.create(data);
+        return postagens;
+    }
+    async update({ params, request, response }) {
+        const postagem = await Posts.findOrFail(params.id);
+        const data = request.only(["titulo", "subtitulo", "conteudo"]);
 
-        const dataToCreate = request.only(['titulo', 'subtitulo', 'conteudo']);
-    
-        return await Course.create(dataToCreate);
-    
+        postagem.merge(data);
+        await postagem.save();
+
+        return postagem
+    }
+    async destroy({ params, request, response }) {
+        const postagem = await Posts.findOrFail(params.id);
+        await postagem.delete();
     }
 
 }
-
-Route.post('/posts', 'PostController.store');
+module.exports = PostController;
