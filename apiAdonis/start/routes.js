@@ -19,3 +19,8 @@ const Route = use('Route')
 Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
+
+Route.get('/postagens', async ({ response }) => {
+  const posts = await Posts.all()
+  response.send(postagens)
+})
