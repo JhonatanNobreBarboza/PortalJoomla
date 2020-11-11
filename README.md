@@ -28,6 +28,10 @@
 
 # Adonis API application
 
+### Rotas da API para acesso externo
+
+![Badge](https://github.com/JhonatanNobreBarboza/PortalJoomla/blob/master/images/externas/rotasAdonis.PNG)
+
 This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
 
 * Bodyparser
